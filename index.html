@@ -5,74 +5,103 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>assigment1</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <link href="index.css" rel="stylesheet">
+  
 </head>
 
 <body>
-  
+    <nav class="p-3 mb-2 bg-light text-dark">
+    <ul class="nav justify-content-end" >
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inventory">INVENTORY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" href="#blog">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#galery">GALERY</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active"  aria-current="page" href="#product">PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+          </li>
+      </ul>
+      </nav>
+
+<!-- yang awal di assignment 1
   <ul class="navbar" >
     <li ><a href="#inventory">INVENTORY</a></li>
     <li ><a href="#blog">BLOG</a></li>
     <li ><a href="#galery">GALERY</a></li>
     <li ><a href="#product">PRODUCT</a></li>
     <li ><a href="#home">HOME</a></li>
-  </ul>
+  </ul> -->
+
 
   <table class="tabel" >
     <tr>
-      <th rowspan="5"><img src="img/yohana.jpg" width="70" alt="yohana"></th>
-      <td colspan="2"><b>Yohana Br Marpaung</b></td>
+      <th rowspan="5" class="gambar"><img src="coba.jpg"></th>
+      <td colspan="2"><b id="ganti-nama">Yohana Br Marpaung</b></td>
       <td>Availability</td>
-      <td>:  Full Time</td>
+      <td >:  <span id="ganti-avalibity">Full Time</span></td>
     </tr>
-    <tr>
-      <td rowspan="3" colspan="2">Front End Designer</td>           
+    <tr >
+      <td rowspan="3" colspan="2" id="ganti-role">Front End Designer</td>           
       <td class="1">Usia</td>
-      <td>:  20</td>
+      <td >:  <span id="ganti-usia">20</span></td>
     </tr>
 
     <tr>           
       <td class="">Lokasi</td>           
-      <td>:  Palangka Raya, Indonesia</td>
+      <td >: <span id="ganti-lokasi">Palangka Raya, Indonesia</span></td>
     </tr>
 
     <tr>           
       <td>Pengalaman</td>
-      <td>:  2</td>
+      <td >: <span id="ganti-ye">2</span>  </td>
     </tr>
 
     <tr>
-      <td class="kotak1" ><a class="link" href="#">Kontak</a></td>
-      <td class="kotak2">Resume</td>
+      <td class="kotak1" >
+        <button type="button" style="margin-right: 12px;" class="btn btn-info mr-xl-1" onclick="
+           document.getElementById('display').style.display = 'block';">Edit</button> 
+        <button onclick="reset()" type="button" class="btn btn-light">reset</button></td>
+      <td></td>
       <td>Email</td>
-      <td>:  Yohanavanesa7@gmail.com</td>
+      <td >: <span id="ganti-email">Yohanavanesa7@gmail.com</span></td>
     </tr>
   </table><br/>
 
-  <form>
+  <form id="display" style="display: none; margin: 10px;" method="post" onsubmit="data(); return false">
     <label for="nama">Name</label>
-    <input type="text" name="nama" value="" >
+    <input type="text" name="nama" value="" id="nama" required />
 
     <br><label for="role">Role</label> <br/>
-    <input type="text" name="Role" value="" >
+    <input type="text" name="Role" value="" id="role" required />
 
     <br><label for="availability">Availability</label> <br/>
-    <input type="text" name="Availability" value="" >
+    <input type="text" name="Availability" value=""  id="ava" required />
 
     <br><label for="age">Age</label> <br/>
-    <input type="text" name="Age" value="" >
+    <input type="text" name="Age" value="" id="umr" required />
 
     <br><label for="lokasi">Lokasi</label> <br/>
-    <input type="text" name="Lokasi" value="" >
+    <input type="text" name="Lokasi" value="" id="lokasi" required />
 
     <br><label for="ye">Years Experience</label> <br/>
-    <input type="text" name="YE" value="" >
+    <input type="text" name="YE" value="" id="ye" required />
 
     <br><label for="email">Email</label> <br/>
-    <input type="text" name="Email" value="" >
+    <input type="text" name="Email" value="" id="email" required />
 
-    <br><input class="submit" type="submit" value="SUBMIT"><br/>
+    <br><input class="submit" type="submit" value="SUBMIT" /><br/>
   </form>
-
+  <script src="index.js"></script>
+  
 </body>
 </html>
